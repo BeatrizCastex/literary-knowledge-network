@@ -133,7 +133,6 @@ Key sections:
 - `docs/pipeline_summary.md` - Stage-by-stage pipeline narrative with tooling notes.
 - `docs/neo4j_data_dictionary.md` - Graph schema, node/relationship properties, and provenance.
 - `docs/reproducibility.md` - Runtime estimation, logging outputs, and reproducibility checklist.
-- `docs/thesis_alignment.md` - How each pipeline stage supports the thesis questions and deliverables.
 - `data/output/results_metrics.json` - Aggregated embedding, similarity, and community metrics consumed by analysis notebooks.
 
 ## License & Citation
