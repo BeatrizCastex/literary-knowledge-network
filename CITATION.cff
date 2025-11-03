@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Literary Knowledge Network"
+message: "If you use this project in your research, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Castex"
+    given-names: "Beatriz"
+    affiliation: "University of São Paulo"
+version: "0.1.0"
+date-released: 2025-11-05
+identifiers:
+  - type: url
+    value: "https://github.com/your-username/literary-knowledge-network"
+repository-code: "https://github.com/your-username/literary-knowledge-network"
+keywords:
+  - "knowledge graph"
+  - "literary networks"
+  - "goodreads"
+  - "neo4j"

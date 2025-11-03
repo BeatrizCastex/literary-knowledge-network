@@ -1,0 +1,40 @@
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# Project data and logs
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/**/.gitkeep
+
+data/processed/**
+!data/processed/
+!data/processed/.gitkeep
+!data/processed/**/.gitkeep
+
+data/output/**
+!data/output/
+!data/output/.gitkeep
+!data/output/**/.gitkeep
+
+logs/*
+!logs/.gitkeep
+!logs/pipeline_runs/
+logs/pipeline_runs/*
+!logs/pipeline_runs/*.json
+!logs/pipeline_runs/.gitkeep
+
+# Notebooks artifacts
+notebooks/.ipynb_checkpoints/
+
+# Tooling
+.DS_Store
+*.swp

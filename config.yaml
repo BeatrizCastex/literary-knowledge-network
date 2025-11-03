@@ -1,0 +1,45 @@
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  output_dir: data/output
+  extraction_dir: data/processed/extraction
+  normalization_dir: data/processed/normalized
+  enrichment_dir: data/processed/enriched
+  embeddings_dir: data/output/embeddings
+  similarity_dir: data/output/similarity
+  communities_dir: data/output/communities
+  logs_dir: logs
+
+raw_files:
+  works: goodreads_book_works.json.gz
+  books: goodreads_books.json.gz
+  authors: goodreads_book_authors.json.gz
+  series: goodreads_book_series.json.gz
+
+defaults:
+  extraction:
+    target_works: 5000
+    test_target: 200
+    random_seed: 42
+  normalization:
+    publisher_threshold: 90.0
+    tag_threshold: 92.0
+  enrichment:
+    keyword_method: hybrid
+    auto_wikidata: true
+  embedding:
+    method: both
+    model_name: all-MiniLM-L6-v2
+    batch_size: 64
+  similarity:
+    top_k: 25
+    threshold: 0.5
+    tfidf-weight: 0.11
+  communities:
+    resolution: 1.0
+
+neo4j:
+  uri: neo4j://127.0.0.1:7687
+  user_env: NEO4J_USER
+  password_env: NEO4J_PASSWORD
+  database_env: NEO4J_DATABASE

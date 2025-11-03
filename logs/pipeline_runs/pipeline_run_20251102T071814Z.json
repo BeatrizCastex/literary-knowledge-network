@@ -1,0 +1,58 @@
+{
+  "pipeline_id": "20251102T071814Z",
+  "pipeline_start": "2025-11-02T04:18:14-03:00",
+  "pipeline_end": "2025-11-02T15:02:40-03:00",
+  "total_duration_seconds": 38666,
+  "sample_size": 5000,
+  "random_seed": "42",
+  "neo4j_password_supplied": true,
+  "config_sha256": "b7523db16c83105f15527a940ba3db9ea1e916e4f983b61f4eb4b14e96a98c3e",
+  "steps": [
+    {
+      "index": 1,
+      "title": "Step 1: Data extraction (sample size 5000)",
+      "command": "python3 data-extraction-v3.py --sample-size 5000 --export --export-dir data/processed/extraction --random-seed 42",
+      "duration_seconds": 108
+    },
+    {
+      "index": 2,
+      "title": "Step 2: Data normalization",
+      "command": "python3 data-normalization.py --input-dir data/processed/extraction --output-dir data/processed/normalized --export --auto-merge",
+      "duration_seconds": 1334
+    },
+    {
+      "index": 3,
+      "title": "Step 3: Data enrichment",
+      "command": "python3 enritch-data.py --input-dir data/processed/normalized --output-dir data/processed/enriched --keyword-method hybrid --auto-wikidata --export --progress",
+      "duration_seconds": 37114
+    },
+    {
+      "index": 4,
+      "title": "Step 4: Data injection (Neo4j)",
+      "command": "python3 data-injection.py --input-dir data/processed/enriched --verbose",
+      "duration_seconds": 29
+    },
+    {
+      "index": 5,
+      "title": "Step 5: Embedding generation",
+      "command": "python3 embedding.py --input-dir data/processed/enriched --output-dir data/output/embeddings --method both --progress --verbose",
+      "duration_seconds": 71
+    },
+    {
+      "index": 6,
+      "title": "Step 6: Similarity computation",
+      "command": "python3 similarity.py --embedding-file data/output/embeddings/work_embeddings_sbert.parquet --output-file data/output/similarity/work_similarity.parquet --top-k 20 --threshold 0.50 --tfidf-file data/output/embeddings/work_embeddings_tfidf.npz --tfidf-weight 0.1 --write-neo4j --clear-existing --verbose",
+      "duration_seconds": 7
+    },
+    {
+      "index": 7,
+      "title": "Step 7: Community detection",
+      "command": "python3 community_detection.py --similarity-file data/output/similarity/work_similarity.parquet --output-file data/output/communities/work_communities.parquet --write-neo4j --clear-existing --verbose",
+      "duration_seconds": 3
+    }
+  ],
+  "log_files": {
+    "pipeline_run": "logs/pipeline_runs/pipeline_run_20251102T071814Z.json",
+    "data_injection_summary": "logs/pipeline_runs/pipeline_run_20251102T071814Z_injection_summary.json"
+  }
+}

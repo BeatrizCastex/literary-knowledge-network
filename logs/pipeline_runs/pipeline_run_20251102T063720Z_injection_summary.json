@@ -1,0 +1,150 @@
+{
+  "nodes": {
+    "Book": {
+      "attempted": 361,
+      "created": 361
+    },
+    "Country": {
+      "attempted": 174,
+      "created": 174
+    },
+    "Language": {
+      "attempted": 26,
+      "created": 26
+    },
+    "Person": {
+      "attempted": 309,
+      "created": 309
+    },
+    "Publisher": {
+      "attempted": 234,
+      "created": 234
+    },
+    "Series": {
+      "attempted": 60,
+      "created": 60
+    },
+    "Tag": {
+      "attempted": 1439,
+      "created": 1439
+    },
+    "Work": {
+      "attempted": 200,
+      "created": 200
+    },
+    "Year": {
+      "attempted": 44,
+      "created": 44
+    }
+  },
+  "parameters": {
+    "batch_size": 500,
+    "min_tag_occurrences": 3
+  },
+  "relationships": {
+    "BOOK_HAS_TAG": {
+      "attempted": 6,
+      "created": 6
+    },
+    "BOOK_IS_EDITION": {
+      "attempted": 361,
+      "created": 361
+    },
+    "BOOK_PUBLISHED_BY": {
+      "attempted": 292,
+      "created": 292
+    },
+    "BOOK_PUBLISHED_IN": {
+      "attempted": 361,
+      "created": 361
+    },
+    "BOOK_YEAR_PUBLISHED": {
+      "attempted": 298,
+      "created": 298
+    },
+    "PERSON_BORN_IN": {
+      "attempted": 127,
+      "created": 0
+    },
+    "PERSON_HAS_CITIZENSHIP": {
+      "attempted": 166,
+      "created": 13
+    },
+    "PERSON_HAS_TAG": {
+      "attempted": 0,
+      "created": 0
+    },
+    "PERSON_IS_RELATED": {
+      "attempted": 0,
+      "created": 0
+    },
+    "PERSON_LIVES_IN": {
+      "attempted": 0,
+      "created": 0
+    },
+    "PERSON_NAMED_IN": {
+      "attempted": 49,
+      "created": 49
+    },
+    "PERSON_WAS_BORN": {
+      "attempted": 166,
+      "created": 28
+    },
+    "PERSON_WAS_DECEASED": {
+      "attempted": 49,
+      "created": 22
+    },
+    "PERSON_WORKED_ON_BOOK": {
+      "attempted": 464,
+      "created": 464
+    },
+    "PERSON_WORKED_ON_SERIES": {
+      "attempted": 94,
+      "created": 94
+    },
+    "PERSON_WORKED_ON_WORK": {
+      "attempted": 288,
+      "created": 288
+    },
+    "PERSON_WORKS_FOR": {
+      "attempted": 338,
+      "created": 338
+    },
+    "PUBLISHER_FOUNDED_IN": {
+      "attempted": 99,
+      "created": 35
+    },
+    "PUBLISHER_LOCATED_IN": {
+      "attempted": 114,
+      "created": 0
+    },
+    "SERIES_HAS_TAG": {
+      "attempted": 67,
+      "created": 67
+    },
+    "WORK_CITED_IN": {
+      "attempted": 0,
+      "created": 0
+    },
+    "WORK_FIRST_PUBLISHED": {
+      "attempted": 200,
+      "created": 200
+    },
+    "WORK_HAS_TAG": {
+      "attempted": 344,
+      "created": 342
+    },
+    "WORK_PART_OF": {
+      "attempted": 60,
+      "created": 60
+    },
+    "WORK_PUBLISHED_IN": {
+      "attempted": 200,
+      "created": 200
+    },
+    "WORK_SIMILAR_TO": {
+      "attempted": 0,
+      "created": 0
+    }
+  }
+}
