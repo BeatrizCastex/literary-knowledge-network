@@ -42,6 +42,7 @@ literary-knowledge-network/
 4. **Place raw Goodreads dumps**
    - Drop the gzipped JSON files inside `data/raw/`.
    - The filenames should match those referenced in `config.yaml`.
+   - Source the dumps from the Goodreads data release curated by Julian McAuley and collaborators at UC San Diego: <https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html>. Review their usage notes before redistributing the raw files.
 
 ### Running the full 10k workflow
 
@@ -138,5 +139,9 @@ Key sections:
 ## License & Citation
 
 This project is released under the MIT License (see `LICENSE`). If you build on this work in academic publications, please cite using the metadata in `CITATION.cff`.
+
+## Data Attribution
+
+This repository redistributes code only. The Goodreads metadata used by the pipeline originates from the UC San Diego Goodreads dataset by Julian McAuley and colleagues. You can request and download the original data, along with licensing details and attribution guidelines, at <https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html>. Please acknowledge their work in any derivative research and comply with the dataset’s terms of use.
 
 **Note:** The code and documentation for this project was made with the assistance of OpenAI's ChatGPT and Codex.
